@@ -1,41 +1,52 @@
 const services = [
   {
     title: "Design de Sobrancelhas",
-    description: "Design pensado para valorizar o olhar com naturalidade e simetria.",
+    description:
+      "Design pensado para valorizar o olhar com naturalidade e simetria.",
   },
   {
     title: "Esmaltação em Gel",
-    description: "Brilho intenso, secagem imediata e acabamento duradouro.",
+    description:
+      "Brilho intenso, secagem imediata e acabamento duradouro.",
   },
   {
     title: "Blindagem",
-    description: "Mais resistência para unhas naturais, com acabamento leve e elegante.",
+    description:
+      "Mais resistência para unhas naturais, com acabamento leve e elegante.",
   },
   {
-    title: "Alongamento de Unhas",
-    description: "Unhas alongadas com sofisticação, estrutura e acabamento impecável.",
+    title: "Alongamento",
+    description:
+      "Unhas alongadas com sofisticação, estrutura e acabamento impecável.",
   },
   {
     title: "Cuticulagem Russa",
-    description: "Técnica precisa para um acabamento limpo, delicado e refinado.",
+    description:
+      "Técnica precisa para um acabamento limpo, delicado e refinado.",
   },
   {
     title: "Manicure e Pedicure",
-    description: "Cuidado completo para mãos e pés com atenção aos detalhes.",
+    description:
+      "Cuidado completo para mãos e pés com atenção aos detalhes.",
   },
   {
     title: "Extensão de Cílios",
-    description: "Olhar marcante, elegante e personalizado para o seu estilo.",
+    description:
+      "Olhar marcante, elegante e personalizado para o seu estilo.",
   },
   {
     title: "Harmonização Podal",
-    description: "Cuidado especializado para saúde, conforto e beleza dos pés.",
+    description:
+      "Cuidado especializado para saúde, conforto e beleza dos pés.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="servicos" className="bg-[#F7F4EE] px-6 py-24 text-[#050505]">
+    <section
+      id="servicos"
+      className="bg-[#F7F4EE] px-6 py-24 text-[#050505]"
+    >
       <div className="mx-auto max-w-7xl">
         <p className="mb-4 text-xs uppercase tracking-[5px] text-[#CCAE57]">
           Nossos serviços

@@ -8,12 +8,13 @@ const whatsappLink =
   encodeURIComponent(
     "Olá! Encontrei o site da Sallus e gostaria de agendar um horário."
   );
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(204,174,87,0.18),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_25%,rgba(204,174,87,0.16),transparent_38%)]" />
 
-      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+      <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <Image
           src="/images/logo-sallus.png"
           alt="Logo Sallus"
@@ -23,26 +24,44 @@ export default function Hero() {
         />
 
         <nav className="hidden gap-8 text-xs uppercase tracking-[3px] text-zinc-300 md:flex">
-          <a href="#servicos">Serviços</a>
-          <a href="#galeria">Galeria</a>
-          <a href="#contato">Contato</a>
+          <a
+            href="#servicos"
+            className="transition hover:text-[#ccae57]"
+          >
+            Serviços
+          </a>
+
+          <a
+            href="#galeria"
+            className="transition hover:text-[#ccae57]"
+          >
+            Galeria
+          </a>
+
+          <a
+            href="#contato"
+            className="transition hover:text-[#ccae57]"
+          >
+            Contato
+          </a>
         </nav>
 
         <a
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded-full border border-[#ccae57] px-5 py-2 text-xs uppercase tracking-[2px] text-[#ccae57] md:block"
+          className="hidden rounded-full border border-[#ccae57] px-5 py-2 text-xs uppercase tracking-[2px] text-[#ccae57] transition hover:bg-[#ccae57] hover:text-black md:block"
         >
           Agendar
         </a>
       </header>
 
-      <div className="relative z-10 mx-auto grid min-h-[calc(100vh-92px)] max-w-7xl items-center gap-12 px-6 py-12 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid min-h-[calc(100vh-92px)] max-w-[1440px] items-center gap-12 px-6 pb-12 pt-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="relative z-10"
         >
           <p className="mb-5 text-xs uppercase tracking-[5px] text-[#ccae57]">
             Beleza que realça sua essência
@@ -64,14 +83,14 @@ export default function Hero() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-[#ccae57] px-8 py-4 text-center font-semibold text-black transition hover:scale-[1.02]"
+              className="rounded-full bg-[#ccae57] px-8 py-4 text-center font-semibold text-black transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(204,174,87,0.25)]"
             >
               Agendar pelo WhatsApp
             </a>
 
             <a
               href="#servicos"
-              className="rounded-full border border-[#ccae57] px-8 py-4 text-center font-semibold text-[#ccae57] transition hover:scale-[1.02]"
+              className="rounded-full border border-[#ccae57] px-8 py-4 text-center font-semibold text-[#ccae57] transition duration-300 hover:-translate-y-1 hover:bg-[#ccae57] hover:text-black"
             >
               Conhecer serviços
             </a>
@@ -79,18 +98,24 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative min-h-[430px] overflow-hidden rounded-[40px] border border-[#ccae57]/30 bg-zinc-900 lg:min-h-[620px]"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.95, delay: 0.15 }}
+          className="relative min-h-[460px] overflow-hidden rounded-[36px] lg:min-h-[680px]"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#ccae57]/25 via-transparent to-black" />
-          <div className="absolute inset-8 rounded-[32px] border border-[#ccae57]/20" />
-          <div className="relative flex h-full min-h-[430px] items-center justify-center p-8 lg:min-h-[620px]">
-            <p className="max-w-xs text-center text-zinc-500">
-              Aqui entra a imagem editorial da Sallus
-            </p>
-          </div>
+          <Image
+            src="/images/hero-sallus.webp.png"
+            alt="Fachada da Sallus Esmalteria"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 60vw"
+            className="object-cover"
+            style={{ objectPosition: "center center" }}
+          />
+
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+
+          <div className="pointer-events-none absolute inset-0 rounded-[36px] border border-white/10" />
         </motion.div>
       </div>
     </section>
