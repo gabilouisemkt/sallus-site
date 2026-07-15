@@ -3,11 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const whatsappLink =
-  "https://wa.me/5548984181611?text=" +
-  encodeURIComponent(
-    "Olá! Encontrei o site da Sallus e gostaria de agendar um horário."
-  );
+const bookingLink = "https://maapp.com.br/SALLUSESMALTERIA";
 
 export default function Hero() {
   return (
@@ -16,45 +12,52 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10" />
 
-      <header className="relative z-20 h-[88px] w-full border-b border-white/10 bg-black/35 shadow-[0_8px_25px_rgba(0,0,0,0.20)] backdrop-blur-md">
-        <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
+      {/* BARRA ESCURA SOBREPOSTA COM SOMBRA DOURADA */}
+      <header className="relative z-20 h-[88px] w-full border-b border-[#E8CF82]/25 bg-black/30 shadow-[0_14px_35px_rgba(0,0,0,0.38),0_18px_40px_rgba(204,174,87,0.32)] backdrop-blur-lg">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-transparent" />
+
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-[#F0D681]/60" />
+
+        <div className="pointer-events-none absolute inset-x-0 -bottom-5 h-8 bg-gradient-to-b from-[#CCAE57]/25 to-transparent blur-xl" />
+
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-between px-6">
           <Image
             src="/images/logo-sallus.png"
             alt="Logo Sallus"
             width={150}
             height={55}
             priority
-            className="h-auto object-contain drop-shadow-[0_3px_8px_rgba(0,0,0,0.65)]"
+            className="h-auto object-contain brightness-0 drop-shadow-[0_2px_3px_rgba(255,255,255,0.18)]"
           />
 
-          <nav className="hidden gap-8 text-xs uppercase tracking-[3px] text-white/80 md:flex">
+          <nav className="hidden gap-8 text-xs uppercase tracking-[3px] text-white/85 md:flex">
             <a
               href="#servicos"
-              className="transition duration-300 hover:text-[#CCAE57]"
+              className="transition duration-300 hover:text-[#E8CF82]"
             >
               Serviços
             </a>
 
             <a
               href="#galeria"
-              className="transition duration-300 hover:text-[#CCAE57]"
+              className="transition duration-300 hover:text-[#E8CF82]"
             >
               Galeria
             </a>
 
             <a
               href="#contato"
-              className="transition duration-300 hover:text-[#CCAE57]"
+              className="transition duration-300 hover:text-[#E8CF82]"
             >
               Contato
             </a>
           </nav>
 
           <a
-            href={whatsappLink}
+            href={bookingLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-[#CCAE57] px-5 py-2 text-xs font-semibold uppercase tracking-[2px] text-black transition duration-300 hover:-translate-y-1 hover:bg-white md:block"
+            className="hidden rounded-full bg-black px-5 py-2 text-xs font-semibold uppercase tracking-[2px] text-[#CCAE57] shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-black md:block"
           >
             Agendar
           </a>
@@ -88,12 +91,12 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
-              href={whatsappLink}
+              href={bookingLink}
               target="_blank"
               rel="noopener noreferrer"
               className="flex w-full items-center justify-center rounded-full bg-black px-6 py-4 text-center font-semibold text-[#CCAE57] transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-black hover:shadow-xl sm:w-[220px]"
             >
-              Agendar pelo WhatsApp
+              Agendar agora
             </a>
 
             <a
