@@ -1,7 +1,10 @@
 import Image from "next/image";
 
 const whatsappLink =
-  "https://wa.me/5548984181611?text=Olá!%20😊%0A%0AEncontrei%20o%20site%20da%20Sallus%20e%20gostaria%20de%20agendar%20um%20horário.";
+  "https://wa.me/5548984181611?text=" +
+  encodeURIComponent(
+    "Olá! Encontrei o site da Sallus e gostaria de agendar um horário."
+  );
 
 export default function Footer() {
   return (

@@ -9,25 +9,44 @@ const highlights = [
 
 export default function About() {
   return (
-    <section className="relative isolate min-h-[850px] overflow-hidden text-white">
-      {/* Foto ocupando toda a seção */}
-      <Image
-        src="/images/espaco-sallus.png"
-        alt="Espaço interno da Sallus Esmalteria"
-        fill
-        sizes="100vw"
-        className="object-cover"
-        style={{ objectPosition: "center center" }}
-      />
+    <section
+      id="historia"
+      className="relative overflow-hidden bg-[#050505] text-white"
+    >
+      {/* FOTO NO CELULAR — APARECE INTEIRA */}
+      <div className="relative aspect-[8/3] w-full md:hidden">
+        <Image
+          src="/images/espaco-sallus-led.png"
+          alt="Espaço interno da Sallus Esmalteria"
+          fill
+          quality={95}
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: "center center" }}
+        />
 
-      {/* Sombra preta sobre a imagem */}
-      <div className="absolute inset-0 bg-black/70" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+      </div>
 
-      {/* Degradê para reforçar a leitura */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/85" />
+      {/* FOTO DE FUNDO NO COMPUTADOR */}
+      <div className="pointer-events-none absolute inset-0 hidden md:block">
+        <Image
+          src="/images/espaco.png"
+          alt="Espaço interno da Sallus Esmalteria"
+          fill
+          quality={95}
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: "center center" }}
+        />
 
-      {/* Conteúdo */}
-      <div className="relative z-10 mx-auto flex min-h-[850px] max-w-7xl flex-col justify-center px-6 py-24">
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/90" />
+      </div>
+
+      {/* CONTEÚDO */}
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 py-20 md:min-h-[850px] md:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-5 text-xs uppercase tracking-[6px] text-[#CCAE57]">
             Nossa História
@@ -62,7 +81,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Diferenciais */}
+        {/* DIFERENCIAIS */}
         <div className="mt-16 grid border-t border-white/20 pt-10 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map((item, index) => (
             <div
