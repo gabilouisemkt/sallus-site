@@ -1,45 +1,55 @@
-const testimonials = [
-  {
-    name: "Cliente Sallus",
-    text: "Atendimento impecável, ambiente lindo e resultado perfeito. Amei cada detalhe!",
-  },
-  {
-    name: "Cliente Sallus",
-    text: "Minha esmaltação ficou maravilhosa e durou muito. Experiência excelente!",
-  },
-  {
-    name: "Cliente Sallus",
-    text: "Profissionais cuidadosas, espaço acolhedor e um acabamento impecável.",
-  },
-];
+"use client";
+
+import { useEffect, useRef } from "react";
 
 export default function Testimonials() {
+  const widgetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = widgetRef.current;
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    const script = document.createElement("script");
+
+    script.src =
+      "https://cdn.trustindex.io/loader.js?b1f227c7618e815de136e2c5e81";
+    script.async = true;
+    script.defer = true;
+
+    container.appendChild(script);
+
+    return () => {
+      container.innerHTML = "";
+    };
+  }, []);
+
   return (
     <section className="bg-[#050505] px-6 py-24 text-white">
       <div className="mx-auto max-w-7xl">
-        <p className="mb-4 text-xs uppercase tracking-[5px] text-[#CCAE57]">
-          Avaliações
-        </p>
+        <div className="text-center">
+          <p className="mb-4 text-xs uppercase tracking-[5px] text-[#CCAE57]">
+            Avaliações
+          </p>
 
-        <h2 className="max-w-3xl font-serif text-4xl leading-tight md:text-6xl">
-          Quem conhece a Sallus recomenda.
-        </h2>
+          <h2 className="font-serif text-4xl leading-tight md:text-6xl">
+            Quem conhece a Sallus recomenda.
+          </h2>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {testimonials.map((item) => (
-            <div
-              key={item.text}
-              className="rounded-[30px] border border-white/10 bg-white/5 p-8"
-            >
-              <p className="text-[#CCAE57]">★★★★★</p>
+          <p className="mx-auto mt-6 max-w-2xl leading-7 text-zinc-400">
+            Confira as experiências compartilhadas por nossas clientes no
+            Google.
+          </p>
+        </div>
 
-              <p className="mt-6 leading-7 text-zinc-300">“{item.text}”</p>
-
-              <p className="mt-8 font-semibold text-white">{item.name}</p>
-
-              <p className="mt-1 text-sm text-zinc-500">Avaliação Google</p>
-            </div>
-          ))}
+        <div className="mt-14 overflow-hidden rounded-[30px] bg-white p-4 text-black shadow-2xl md:p-8">
+          <div
+            ref={widgetRef}
+            className="min-h-[250px] w-full"
+            aria-label="Avaliações da Sallus no Google"
+          />
         </div>
       </div>
     </section>
