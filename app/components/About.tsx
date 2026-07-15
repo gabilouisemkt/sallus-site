@@ -13,22 +13,22 @@ export default function About() {
       id="historia"
       className="relative overflow-hidden bg-[#050505] text-white"
     >
-      {/* FOTO NO CELULAR */}
-      <div className="relative h-[380px] w-full overflow-hidden bg-black sm:h-[440px] md:hidden">
+      {/* FOTO COMPLETA NO CELULAR */}
+      <div className="relative aspect-[8/3] w-full md:hidden">
         <Image
           src="/images/espaco.png"
           alt="Espaço interno da Sallus Esmalteria"
           fill
           quality={95}
           sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: "center center" }}
+          className="object-contain"
+          priority
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
       </div>
 
-      {/* FOTO DE FUNDO NO COMPUTADOR */}
+      {/* FOTO COMO FUNDO NO COMPUTADOR */}
       <div className="pointer-events-none absolute inset-0 hidden md:block">
         <Image
           src="/images/espaco.png"
@@ -46,7 +46,7 @@ export default function About() {
       </div>
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 pb-20 pt-10 md:min-h-[850px] md:py-24">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 pb-20 pt-12 md:min-h-[850px] md:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-5 text-xs uppercase tracking-[6px] text-[#CCAE57]">
             Nossa História
