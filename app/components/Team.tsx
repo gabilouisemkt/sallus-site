@@ -28,7 +28,7 @@ export default function Team() {
         {/* Foto da equipe */}
         <div className="relative min-h-[580px] overflow-hidden rounded-[36px] border border-black/10 bg-zinc-200 shadow-xl sm:min-h-[680px] lg:min-h-[760px]">
           <Image
-            src="/images/equipe-sallus.png"
+            src="/images/equipe.jpeg"
             alt="Equipe da Sallus Esmalteria"
             fill
             sizes="(max-width: 1024px) 100vw, 45vw"
