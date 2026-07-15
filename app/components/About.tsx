@@ -13,19 +13,18 @@ export default function About() {
       id="historia"
       className="relative overflow-hidden bg-[#050505] text-white"
     >
-      {/* FOTO NO CELULAR — APARECE INTEIRA */}
-      <div className="relative aspect-[8/3] w-full md:hidden">
+      {/* FOTO NO CELULAR */}
+      <div className="relative h-[260px] w-full overflow-hidden bg-black sm:h-[340px] md:hidden">
         <Image
-          src="/images/espaco-sallus-led.png"
+          src="/images/espaco.png"
           alt="Espaço interno da Sallus Esmalteria"
           fill
           quality={95}
           sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: "center center" }}
+          className="object-contain"
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
       </div>
 
       {/* FOTO DE FUNDO NO COMPUTADOR */}
@@ -81,7 +80,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* DIFERENCIAIS */}
         <div className="mt-16 grid border-t border-white/20 pt-10 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map((item, index) => (
             <div
