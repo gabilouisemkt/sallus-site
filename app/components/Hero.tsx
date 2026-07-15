@@ -12,12 +12,10 @@ const whatsappLink =
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#CCAE57] text-[#111111]">
-      {/* Iluminação suave no fundo dourado */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_25%,rgba(255,255,255,0.30),transparent_38%)]" />
 
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10" />
 
-      {/* Faixa superior mais baixa */}
       <header className="relative z-20 h-[88px] w-full border-b border-white/10 bg-black/35 shadow-[0_8px_25px_rgba(0,0,0,0.20)] backdrop-blur-md">
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
           <Image
@@ -63,7 +61,6 @@ export default function Hero() {
         </div>
       </header>
 
-      {/* Conteúdo principal */}
       <div className="relative z-10 mx-auto grid min-h-[calc(100vh-88px)] max-w-[1440px] items-center gap-12 px-6 pb-12 pt-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -94,14 +91,14 @@ export default function Hero() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-black px-8 py-4 text-center font-semibold text-[#CCAE57] transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-black hover:shadow-xl"
+              className="flex w-full items-center justify-center rounded-full bg-black px-6 py-4 text-center font-semibold text-[#CCAE57] transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-black hover:shadow-xl sm:w-[220px]"
             >
               Agendar pelo WhatsApp
             </a>
 
             <a
               href="#servicos"
-              className="rounded-full border border-black px-8 py-4 text-center font-semibold text-black transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-[#CCAE57]"
+              className="flex w-full items-center justify-center rounded-full bg-black px-6 py-4 text-center font-semibold text-[#CCAE57] transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-black hover:shadow-xl sm:w-[220px]"
             >
               Conhecer serviços
             </a>
