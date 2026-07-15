@@ -25,23 +25,24 @@ export default function Team() {
       className="bg-[#F7F4EE] px-6 py-24 text-[#050505]"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-        {/* Foto da equipe */}
-        <div className="relative min-h-[580px] overflow-hidden rounded-[36px] border border-black/10 bg-zinc-200 shadow-xl sm:min-h-[680px] lg:min-h-[760px]">
+        {/* FOTO DA EQUIPE SEM CORTE */}
+        <div className="relative w-full overflow-hidden rounded-[36px] border border-black/10 bg-[#EEEAE2] shadow-xl">
           <Image
-            src="/images/equipenova.jpeg"
+            src="/images/EQUIPE.png"
             alt="Equipe da Sallus Esmalteria"
-            fill
+            width={1200}
+            height={1600}
+            priority
             sizes="(max-width: 1024px) 100vw, 45vw"
-            className="object-cover"
-            style={{ objectPosition: "center 18%" }}
+            className="h-auto w-full object-contain"
           />
 
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
 
-          <div className="pointer-events-none absolute inset-4 rounded-[28px] border border-white/20" />
+          <div className="pointer-events-none absolute inset-4 rounded-[28px] border border-white/25" />
         </div>
 
-        {/* Texto */}
+        {/* TEXTO */}
         <div>
           <p className="mb-4 text-xs uppercase tracking-[5px] text-[#9A7D2E]">
             Nossa Equipe
