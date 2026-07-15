@@ -28,12 +28,12 @@ export default function Team() {
         {/* Foto da equipe */}
         <div className="relative min-h-[580px] overflow-hidden rounded-[36px] border border-black/10 bg-zinc-200 shadow-xl sm:min-h-[680px] lg:min-h-[760px]">
           <Image
-            src="/images/equipe.jpeg"
+            src="/images/equipenova.jpeg"
             alt="Equipe da Sallus Esmalteria"
             fill
             sizes="(max-width: 1024px) 100vw, 45vw"
             className="object-cover"
-            style={{ objectPosition: "center center" }}
+            style={{ objectPosition: "center 18%" }}
           />
 
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
