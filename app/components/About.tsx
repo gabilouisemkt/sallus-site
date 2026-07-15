@@ -14,17 +14,18 @@ export default function About() {
       className="relative overflow-hidden bg-[#050505] text-white"
     >
       {/* FOTO NO CELULAR */}
-      <div className="relative h-[260px] w-full overflow-hidden bg-black sm:h-[340px] md:hidden">
+      <div className="relative h-[380px] w-full overflow-hidden bg-black sm:h-[440px] md:hidden">
         <Image
           src="/images/espaco.png"
           alt="Espaço interno da Sallus Esmalteria"
           fill
           quality={95}
           sizes="100vw"
-          className="object-contain"
+          className="object-cover"
+          style={{ objectPosition: "center center" }}
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" />
       </div>
 
       {/* FOTO DE FUNDO NO COMPUTADOR */}
@@ -45,7 +46,7 @@ export default function About() {
       </div>
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 py-20 md:min-h-[850px] md:py-24">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-6 pb-20 pt-10 md:min-h-[850px] md:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-5 text-xs uppercase tracking-[6px] text-[#CCAE57]">
             Nossa História
@@ -55,7 +56,9 @@ export default function About() {
 
           <h2 className="font-serif text-4xl leading-tight md:text-6xl lg:text-7xl">
             Uma história construída com experiência,{" "}
-            <span className="text-[#CCAE57]">cuidado e propósito.</span>
+            <span className="text-[#CCAE57]">
+              cuidado e propósito.
+            </span>
           </h2>
 
           <div className="mx-auto mt-10 max-w-3xl space-y-6 text-base leading-8 text-zinc-200 md:text-lg">
